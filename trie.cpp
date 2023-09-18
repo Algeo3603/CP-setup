@@ -9,6 +9,7 @@ struct Node {
     }
 };
 
+Node* root = new Node();
 // insert
 Node* curr = root;
 for (char c: word) {
