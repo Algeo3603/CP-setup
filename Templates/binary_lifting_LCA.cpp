@@ -3,6 +3,7 @@ int up[MAX_N][LOG];
 int depth[MAX_N];
 vector<int> children[MAX_N];
 
+
 void dfs(int a) {
     for(int b : children[a]) {
         depth[b] = depth[a] + 1;
@@ -13,6 +14,7 @@ void dfs(int a) {
         dfs(b);
     }
 }
+
 
 int getLCA(int a ,int b) {
     // ensure a is deeper than b
@@ -42,6 +44,7 @@ int getLCA(int a ,int b) {
         return up[a][0];
     }
 }
+
 
 // call dfs which computes depth and ancestors
 dfs(0);

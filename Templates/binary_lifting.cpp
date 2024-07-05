@@ -1,6 +1,7 @@
 const int LOG = log2(k) + 1;
 vector<vector<int>> up(n + 1, vector<int>(LOG));
 
+
 // set parents
 for (int v = 0; v <= n; v++) {
     up[v][0] = mapping[v];
@@ -11,6 +12,7 @@ for (int j = 1; j < LOG; j++) {
         up[v][j] = up[up[v][j - 1]][j - 1];
     }
 }
+
 
 // get k'th ancestor of v
 for (int j = 0; j < LOG; j++) {

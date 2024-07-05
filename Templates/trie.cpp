@@ -1,4 +1,4 @@
-https://leetcode.com/problems/word-break/submissions/1012094418/
+// https://leetcode.com/problems/word-break/submissions/1012094418/
 
 struct Node {
     vector<Node*> next;
